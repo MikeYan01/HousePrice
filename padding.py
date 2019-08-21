@@ -53,7 +53,7 @@ if __name__=='__main__':
             if len(theTape) == 0:
                 continue
 
-            # pad dates
+            # Pad dates
             convert_date = retrieve_locations(theTape)
             result_date_list = search_padding_dates(convert_date, date_list)
 

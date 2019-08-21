@@ -9,12 +9,12 @@ import re
 
 headers = {'User-Agent':'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36'}
 
-# How many pages one city has
+# How many pages in one city
 def getNumPages(soup):
     raw_num = soup.find('div', attrs={"class" : "list-results"}).find('span', attrs={"class" : "result"}).find('em').get_text()
     return float(raw_num) * 1.0/60
 
-# House's lounge and living rooms
+# Extract lounge and living rooms
 def getRoomsLivings(text):
     result = []
     searchObj = re.search(r'(.?)室(.?)厅', text)
@@ -22,7 +22,7 @@ def getRoomsLivings(text):
     result.append(searchObj.group(0)[2])
     return result
 
-# House's area
+# Extract area
 def getArea(text):
     begin = 0
     end = 0
@@ -33,7 +33,7 @@ def getArea(text):
             end = i
     return text[begin+1:end]
 
-# House's orientation
+# Extract orientation
 def getOrientation(text):
     result = ''
     for i in range(0, len(text)):
@@ -47,7 +47,7 @@ def getOrientation(text):
             result += 'W|'
     return result[:-1]
 
-# House's price
+# Extract house's price
 def getPrice(text, area):
     searchObj = re.search(r'[0-9]+', text)
     totalPrice = int(searchObj.group(0)) * 10000

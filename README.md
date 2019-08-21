@@ -1,6 +1,6 @@
 # Brief Introduction   
 
-A trivial Python project to collect Chinese real estate's information on the Internet and generate a model to precict house price.
+A trivial Python project to collect Chinese real estate's information on the Internet and train a model to precict house price.    
 
 # File Structure    
     .
@@ -8,7 +8,7 @@ A trivial Python project to collect Chinese real estate's information on the Int
     ├── fang.py    Collect and normalize data from Fang
     ├── lianjia.py    Normalize data from Lianjia
     ├── median.py    Calculate the median of a city's house prices   
-    ├── padding.py    Pad price in records     
+    ├── padding.py    Pad price between records     
     ├── plotCityHouseIndex.py    Generate each city's HPI chart book, or general sheet     
     ├── train.ipynb    Train a model of house price and make predictions using scikit-learn & Tensorflow
     └── util.py    Some trivial functions used in data wrangling

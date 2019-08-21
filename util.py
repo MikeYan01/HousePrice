@@ -12,13 +12,13 @@ import _geohash
 # city_name = '上海'
 
 
-# 按城市分割数据
+''''''''' split each city's data '''''''''
 # raw_data = pd.read_csv('Data/lianjia201905_normalized.csv', encoding = 'utf-8')
 # new_data = raw_data[raw_data['city'] == city_name]
 # new_data.to_csv('Data/city_result/' + city_name + '.csv', index=False)
 
 
-# 生成geohash
+''''''''' generate geohash '''''''''
 # all_geohash = []
 # last_lng = 0.0
 # last_lat = 0.0
@@ -37,7 +37,7 @@ import _geohash
 
 
 
-# 计算近距离成交量
+''''''''' count transaction nearby '''''''''
 
 # Filter raw data
 # def filter(data, input_hash):
@@ -58,7 +58,7 @@ import _geohash
 #     return False
 
 
-# 按HPI调整格式
+# modify format
 # def modify_price(HPI_reference, input_city, input_div, record_price, record_date):
 #     refer_data = HPI_reference[HPI_reference['city'] == input_city]
 #     refer_data = HPI_reference[HPI_reference['div'] == input_div]
@@ -94,7 +94,7 @@ import _geohash
 
 
 
-# 添加附近价格
+''''''''' add price '''''''''
 # raw_data = pd.read_csv('Data/city_split/' + city_name + '.csv', encoding = 'utf-8')
 # data = raw_data.sort_values(by = 'geohash')
 # data.reset_index(drop=True, inplace=True)
@@ -152,7 +152,7 @@ import _geohash
 
 
 
-# 校正单位价格到当前日期的价格
+''''''''' modify price to current date '''''''''
 
 # def modify_price(HPI_reference, input_city, input_div, record_price, record_date):
 #     refer_data = HPI_reference[HPI_reference['city'] == input_city]
@@ -210,7 +210,7 @@ import _geohash
 
 
 
-# 北京剔除数据缺失行
+''''''''' drop Beijing's missing data rows '''''''''
 # city_name = '北京'
 # drop_index = []
 # raw_data = pd.read_csv('Data/model_data/' + city_name + '.csv')
@@ -223,7 +223,7 @@ import _geohash
 
 
 
-# 删除无关列
+''''''''' drop uselss columns '''''''''
 # city = ['上海', '北京', '南京', '厦门', '合肥', '广州', '成都', '杭州', '武汉', '济南', '深圳', '烟台', '石家庄', '苏州', '西安', '重庆', '长沙', '青岛']
 # for city_name in city:
 #     raw_data = pd.read_csv('Data/city_result/' + city_name + '.csv')
@@ -235,7 +235,7 @@ import _geohash
 
 
 
-# 转换方向
+''''''''' convert directions '''''''''
 
 # city_name = '北京'
 # raw_data = pd.read_csv('Data/model_data/' + city_name + '.csv')
