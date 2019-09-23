@@ -1,6 +1,6 @@
 # Brief Introduction   
 
-A trivial Python project to collect Chinese real estate's information on the Internet and train a model to precict house price.    
+A Python project to collect Chinese real estate's information on the Internet and train a model to precict house price.    
 
 # File Structure    
     .
